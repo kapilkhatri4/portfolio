@@ -1,5 +1,4 @@
 .navbar-brand{
-  border: 1px solid #fff;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -76,13 +75,14 @@ nav{
         padding: 10px;
         position: relative;
         left: 100%;
-        height: 25%;
+        height: 20%;
+        border-bottom: 1px solid $secondary-light;
         .nav-link{
           svg{
             width: 100%!important;
             text-align: center;
             height: 100%!important;
-            font-size: clamp(4rem,10vw,10rem)!important;
+            font-size: clamp(4rem,10vw,9rem)!important;
             stroke:  $secondary-light;
             fill: none!important;
           }
