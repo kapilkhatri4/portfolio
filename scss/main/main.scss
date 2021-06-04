@@ -1,0 +1,71 @@
+@import '../abstracts/index';
+@import './navigation';
+@import './home';
+@import './projects';
+@import './skills';
+@import './about';
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: $secondary-dark;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+.heading{
+  width: 100%;
+  margin-bottom: 50px;
+  
+  h1{
+    font-size: clamp(4rem,8vw,10rem);
+    color: $heading-light;
+    font-weight: 900;
+    display: inline-flex;
+  }
+  .project-head{
+    position: relative;
+    left: 0;
+    animation: leftto 20s ease infinite;
+  }
+  .work-head{
+    margin-top: 50px;
+      font-size: clamp(2rem,8vw,3rem);
+      position: relative;
+      left: 0;
+      animation: rightto 20s ease infinite;
+      i{
+        font-size: clamp(.5rem,8vw,3rem);
+        padding: clamp(.2rem,8vw,1rem);
+      }
+  }
+  @include mq(medium){
+    .project-head,
+    .work-head{
+      animation: none;
+    }
+  }
+}
+
+@keyframes leftto {
+  0%{
+    left: 0;
+  }
+  50%{
+    left: 30%;
+  }
+  100%{
+    left:0;
+  }
+}
+@keyframes rightto {
+  0%{
+    left: 30%;
+  }
+  50%{
+    left: 0;
+  }
+  100%{
+    left:30%;
+  }
+}

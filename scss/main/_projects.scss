@@ -1,0 +1,113 @@
+#projects{
+  scroll-snap-align: center;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  flex-direction: column;
+  margin-bottom: 200px;
+  overflow: hidden;
+  padding: 0 20px;
+  .work{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    .project{
+      max-width: 300px;
+      height: 300px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: .2rem;
+      .project-img{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        overflow: hidden!important;
+        transition: all .4s ease;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: .6;
+        img{
+          max-width: 300px;
+          max-height: 300px;
+          object-fit: contain;
+          transition: all .4s ease;
+        }
+        &::after{
+          content: "View Project";
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          background: $primary-light;
+          border-radius: 100%;
+          transform: scale(0);
+          font-size: 1.2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all .4s ease;
+        }
+      }
+      .project-link{
+        font-size: 1.4rem;
+        color: $secondary-light;
+        text-decoration: underline !important;
+      }
+     
+      &:hover{
+        .project-img{
+          opacity: 1;
+          img{
+            transition: all .4s ease;
+            transform: scale(1.2);
+          }
+          &::after{
+            transform: scale(1)!important;
+          }
+        }
+      }
+    }
+  }
+  
+  @include mq(exlarge){
+    .work{
+      grid-template-columns: 1fr 1fr 1fr;
+      .project{
+        min-height: 400px;
+      }
+    }
+  }
+  @include mq(large){
+    .work{
+      grid-template-columns: 1fr 1fr;
+      .project{
+        min-height: 350px;
+      }
+    }
+  }
+  @include mq(medium){
+    .work{
+      grid-template-columns: 1fr 1fr;
+      .project{
+        min-height: 200px;
+      }
+    }
+  }
+  @include mq(small){
+    .work{
+      grid-template-columns: 1fr;
+      .project{
+        min-height: 150px;
+      }
+    }
+  }
+}

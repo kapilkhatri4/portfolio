@@ -1,0 +1,107 @@
+#skills{
+  width: 100%;
+  min-height: 100vh;
+  color: $primary-light;
+  padding: 0 20px;
+  margin-bottom: 200px;
+  .designing{
+    margin-bottom: 200px;
+  }
+    .dev-title{
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: $primary-light;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .title-info{
+      font-size: 1.3rem;
+      text-align: center;
+    }
+    .dev-tool{
+      text-align: center;
+      margin-top: 70px;
+      
+      .dev-tool-head{
+        font-size: 2rem;
+        font-size: 700;
+        margin-bottom: 70px;
+      }
+      margin-top: 50px;
+      .tools{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 5px;
+        justify-content: center;
+        border-top: 1px solid $secondary-light;
+        .wing-txt{
+          border-bottom: 1px solid $secondary-light;
+          padding: 30px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: $primary-dark;
+          position: relative;
+          background-size: 50px 50px !important;
+          overflow: hidden;
+          transition: all .4s ease ;
+          .fas{
+            font-size: 1.2rem;
+          }
+          p{
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: $secondary-light;
+          }
+          &:hover{
+            background-position: right bottom !important;
+          }
+        }
+        .photoshop{
+          background:url('../../img/skills/photoshop.png') no-repeat;
+
+        }
+        .illustartor{
+          background:url('../../img/skills/illustrator.png') no-repeat;
+        }
+        .xd{
+          grid-column: 1/4;
+          background:url('../../img/skills/experience.png') no-repeat;
+        }
+        .html{
+          background:url('../../img/skills/html-5.png') no-repeat;
+          
+        }
+        .css{
+          background:url('../../img/skills/css-3.png') no-repeat;
+        }
+        .js{
+          background:url('../../img/skills/JavaScript.png') no-repeat;
+        }
+        .bt{
+          background:url('../../img/skills/bootstrap.jpg') no-repeat;
+        }
+        .sass{
+          background:url('../../img/skills/sass.png') no-repeat;
+        }
+        .github{
+          background:url('../../img/skills/github.png') no-repeat;
+        }
+      }
+    }
+    @include mq(large){
+
+      .tools{
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto;
+        .xd{
+          grid-column: 1/1 !important;
+        }
+      }
+    }
+}

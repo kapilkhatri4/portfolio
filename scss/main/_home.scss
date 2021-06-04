@@ -1,0 +1,217 @@
+
+.herobg{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary-light;
+  position: relative;
+  padding: 20px;
+  scroll-snap-align: start;
+  overflow: hidden;
+
+  .title{
+    font-size: clamp(2.5rem,6vw,5rem);
+    font-weight: 700;
+    position: relative;
+    color: $primary-light;
+    opacity: 1;
+    animation: late .5s linear 5s  forwards;
+    animation-iteration-count: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 100%;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: $primary-light;
+      animation: home-title 2.8s linear 5s 1 forwards;
+    }
+    span{
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  .fade{
+    transform: translateY(0)!important;
+    opacity: 1!important;
+    transition: opacity .4s ease 5s;
+  }
+  .sub-title{
+    font-size: clamp(1.5rem,5vw,2rem);
+    font-weight: 400;
+    position: relative;
+    width: fit-content;
+    margin-top: 20px;
+    opacity: 0;
+    animation: late .5s ease 5s 1 forwards;
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right:100%;
+      background: $primary-light;
+      animation: sub-title 2.8s ease 5s 1 forwards;
+    }
+  }
+  .home-cta{
+    opacity: 0;
+    transform: translateY(100px);
+    animation: slideup 1s linear 8s forwards;
+  }
+  .home-icons{
+    i{
+      position: absolute;
+      font-size: clamp(1rem,5vw,5rem);
+      padding: clamp(1rem, 10vw,4rem);
+      opacity: 0;
+      transition: all .2s ease;
+      &:hover{
+        opacity: 1;
+        text-shadow: 0px 0px 50px $primary-light;
+      }
+      &:nth-child(1){
+        left: 10%;
+        top: 20%;
+        
+      }
+      &:nth-child(2){
+        left: 25%;
+        top: 20%;
+        
+      }
+      &:nth-child(3){
+        left: 45%;
+        top: 15%;
+        
+      }
+      &:nth-child(4){
+        left: 65%;
+        top: 20%;
+        
+      }
+      &:nth-child(5){
+        left: 80%;
+        top: 18%;
+      }
+      &:nth-child(6){
+        left: 10%;
+        bottom: 15%;
+      }
+      &:nth-child(7){
+        left: 25%;
+        bottom: 12%;
+      }
+      &:nth-child(8){
+        left: 45%;
+        bottom: 20%;
+      }
+      &:nth-child(9){
+        left: 65%;
+        bottom: 25%;
+      }
+      &:nth-child(10){
+        left: 80%;
+        bottom: 20%;
+      }
+      &:nth-child(11){
+        left: 55%;
+        bottom: 10%;
+      }
+      &:nth-child(12){
+        left: 32%;
+        bottom: 10%;
+      }
+      &:nth-child(13){
+        left: 55%;
+        top: 10%;
+      }
+      &:nth-child(14){
+        left: 35%;
+        top: 10%;
+      }
+      &:nth-child(15){
+        left: 45%;
+        bottom: 5%;
+      }
+      &:nth-child(16){
+        right: 20%;
+        bottom: 5%;
+      }
+      &:nth-child(17){
+        left: 18%;
+        bottom: 10%;
+      }
+      &:nth-child(18){
+        left: 18%;
+        top: 10%;
+      }
+      &:nth-child(19){
+        right: 18%;
+        top: 10%;
+      }
+      
+    }
+    @include mq(small){
+      i{
+        visibility: hidden;
+      }
+    }
+  }
+}
+@keyframes show-icons {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes svg {
+ 
+  10%{
+    stroke-dasharray: 20px;
+    stroke-dashoffset: 20px;
+  }
+
+  100%{
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 0px;
+
+  }
+}
+
+@keyframes slide {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
+@keyframes slideup{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes late {
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes home-title {
+ from{
+   left:0;
+ }
+}
+@keyframes sub-title {
+  from{
+    right: 0;
+  }
+}
