@@ -16,7 +16,7 @@ body{
 .heading{
   width: 100%;
   margin-bottom: 50px;
-  
+  overflow: hidden;
   h1{
     font-size: clamp(4rem,8vw,10rem);
     color: $heading-light;
