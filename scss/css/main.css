@@ -292,7 +292,12 @@ nav {
   border: 0;
   outline: 0;
   border-radius: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-animation: slideup 1s linear 8s forwards;
+          animation: slideup 1s linear 8s forwards; }
   .navbar-toggler i {
     position: absolute;
     top: 50%;
@@ -910,5 +915,4 @@ body {
     left: 0; }
   100% {
     left: 30%; } }
-
 /*# sourceMappingURL=main.css.map */

@@ -128,9 +128,9 @@ nav{
   outline: 0;
   border-radius: 100%;
   cursor: pointer;
-  // opacity: 0;
-  // transform: translateY(100px);
-  // animation: slideup 1s linear 8s forwards;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideup 1s linear 8s forwards;
   i{
     position: absolute;
     top: 50%;
